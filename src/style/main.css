@@ -1,0 +1,40 @@
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  align-items: center;
+  place-content: center;
+  background: linear-gradient(#e66465, #9198e5);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.panels {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.panel {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5em;
+  border: 1px solid black;
+  width: 18em;
+}
+
+.panel.success {
+  background-color: lightseagreen;
+}
+.panel.error {
+  background-color: lightcoral;
+}
+

@@ -1,0 +1,20 @@
+{
+  "name": "rsac-lab-tracker",
+  "version": "1.0.0",
+  "description": "Mock API and page to visually show successful hits from lab participants",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite build --emptyOutDir && node server.js",
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build --emptyOutDir"
+  },
+  "author": "Troy Presley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1",
+    "sygnal": "^4.0.2",
+    "vite": "^6.2.2"
+  }
+}
