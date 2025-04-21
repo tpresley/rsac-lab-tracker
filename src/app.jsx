@@ -1,4 +1,3 @@
-import { Collection, ABORT, xs } from 'sygnal'
 import Panel from './panel'
 
 
@@ -31,8 +30,8 @@ APP.model = {
   API_HIT: (state, data) => {
     console.log('HIT', data, state)
     const teams = state.teams
-    const { team, success, error } = data.data[0]
-    const newTeams = teams.map(t => t.team == team ? { team, success, error } : t)
+    const { team, type, success, error } = data.data[0]
+    const newTeams = teams.map(t => t.team == team ? { team, type, success, error } : t)
 
     return { ...state, teams: newTeams }
   }

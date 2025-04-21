@@ -7,10 +7,11 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  color: rgb(197, 197, 197);
   display: grid;
   align-items: center;
   place-content: center;
-  background: linear-gradient(#e66465, #9198e5);
+  background: #18000b none repeat scroll 0 0 !important;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -23,11 +24,10 @@ body {
 }
 
 .panel {
-  color: white;
   font-weight: bold;
   font-size: 2rem;
   padding: 0.5em;
-  border: 1px solid black;
+  border: 1px solid rgb(52, 52, 52);
   width: 18em;
 }
 

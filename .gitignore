@@ -52,6 +52,7 @@ jspm_packages
 *.tgz
 
 build
+dist
 
 # Apple DS_store
 .DS_Store

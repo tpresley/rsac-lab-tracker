@@ -1,9 +1,9 @@
 import { classes } from 'sygnal'
 
 const PANEL = (props, state) => {
-  const { team, success, error } = state
+  const { team, type, success, error } = state
 
-  const message = success ? "Success" : (error || "waiting...")
+  const message = success ? type : (error || "waiting...")
 
   const panelClasses = classes("panel", {success, error})
 
