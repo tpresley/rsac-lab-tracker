@@ -48,17 +48,10 @@ const teamHashes = {
   'Data': 'team5',
   'Johnny5': 'team6',
   'Robbie': 'team7',
-  'Iron Giant': 'team8',
+  'IronGiant': 'team8',
   'Tachikoma': 'team9',
-  'Paranoid Marvin': 'team10'
+  'ParanoidMarvin': 'team10'
 };
-
-// for (let i = 1; i <= 10; i++) {
-//   const teamName = `team${i}`;
-//   const teamHash = crypto.createHash('md5').update(teamName).digest('hex');
-//   console.log(teamName, teamHash);
-//   teamHashes[teamHash] = teamName;
-// }
 
 app.use(express.json());
 
@@ -82,6 +75,13 @@ app.use((req, res) => {
 
 function handleApiCall(req, res, type) {
   const authHeader = req.headers.authorization;
+  
+  if (!authHeader) {
+    let team = 'Unknown';
+    const error = 'Missing Authorization Header';
+    return res.status(401).json({ error, team });
+  }
+  
   if (authHeader.substr(0, 7) !== 'Bearer ') {
     let team = teamHashes[authHeader] || 'Unknown'
     const error = 'Bad Authorization Header';
@@ -90,6 +90,7 @@ function handleApiCall(req, res, type) {
     }
     return res.status(401).json({ error, team });
   }
+  
   const team = teamHashes[authHeader.substr(7)] || 'none';
   const hasTeam = team !== 'none';
 
