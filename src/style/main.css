@@ -47,7 +47,7 @@ body > img {
 } */
 
 .neon-text {
-  --base-shadow-size: 0.5px;
+  --base-shadow-size: 0.0px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   color: #fcd9ff; /* soft neon pink */
@@ -88,6 +88,7 @@ body > img {
 }
 
 .success {
+  --base-shadow-size: 0.5px;
   --color: #ff00ff;
 }
 
