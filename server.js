@@ -43,14 +43,14 @@ const LOGS = `
 const teamHashes = {
   'R2D2': 'team1',
   'WALL-E': 'team2',
-  'Rosie': 'team3',
-  'Baymax': 'team4',
-  'Data': 'team5',
-  'Johnny5': 'team6',
-  'Robbie': 'team7',
-  'IronGiant': 'team8',
-  'Tachikoma': 'team9',
-  'ParanoidMarvin': 'team10'
+  'ROSIE': 'team3',
+  'BAYMAX': 'team4',
+  'DATA': 'team5',
+  'JOHNNY5': 'team6',
+  'ROBBIE': 'team7',
+  'IRONGIANT': 'team8',
+  'TACHIKOMA': 'team9',
+  'PARANOIDMARVIN': 'team10'
 };
 
 app.use(express.json());
