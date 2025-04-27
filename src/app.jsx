@@ -31,7 +31,21 @@ APP.model = {
     console.log('HIT', data, state)
     const teams = state.teams
     const { team, type, success, error } = data.data[0]
-    const newTeams = teams.map(t => t.team == team ? { team, type, success, error } : t)
+    const newTeams = teams.map(t => {
+      const oldType = t.type
+      const newType = type
+      let newError = error
+      let newSuccess = success
+      if (t.team == team) {
+        if (newType === 'action' && oldType !== 'logs') {
+          newError = '⚠️ Fetch Logs 1st! ⚠️'
+          newSuccess = false
+        }
+        return { team, type, success: newSuccess, error: newError }
+      } else {
+        return t
+      }
+    })
 
     return { ...state, teams: newTeams }
   }
